@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Converter</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  
+  <div id="converter">
+    <div id="dark-mode-toggle" title="Toggle Dark Mode">
+      <i class="fas fa-sun sun-icon"></i>
+      <i class="fas fa-moon moon-icon hidden"></i>
+    </div>
+    
+    <h1>Mini Converter</h1>
+    <label for="color-input">Enter Color:</label>
+    <input type="text" id="color-input" placeholder="e.g., #ff0000 or rgb(255,0,0)">
+    <select id="format-select">
+      <option value="hex">HEX</option>
+      <option value="rgb">RGB</option>
+      <option value="hsl">HSL</option>
+      <option value="hsv">HSV</option>
+      <option value="hwb">HWB</option>
+      <option value="lab">CIELAB</option>
+      <option value="decimal">Decimal</option>
+    </select>
+    <button id="convert-btn">Convert <i class="fas fa-sync-alt"></i></button>
+    <div id="result">
+      <h2>Converted Color:</h2>
+      <p id="converted-value">Result will appear here.</p>
+      <button id="copy-btn">Copy <i class="fas fa-copy"></i></button>
+    </div>
+    <div id="color-display"></div>
+    <div id="history">
+      <h2>Conversion History:</h2>
+      <ul id="history-list"></ul>
+      <button id="clear-history-btn">Clear History <i class="fas fa-trash-alt"></i></button>
+    </div>
+    <div id="copy-popup" class="hidden">Copied to clipboard!</div>
+  </div>
+  <script src="assets/js/chroma.min.js"></script>
+  <script src="assets/js/popup.js"></script>
+</body>
+</html>

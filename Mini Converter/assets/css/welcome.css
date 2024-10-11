@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* Light background for readability */
+  }
+  
+  #welcome-container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #4CAF50; /* Primary color for headings */
+  }
+  
+  header p {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  
+  #dark-mode-toggle i {
+    margin-left: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  #dark-mode-toggle .hidden {
+    display: none;
+  }
+  
+  main {
+    margin-top: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  ul li i {
+    margin-right: 10px;
+  }
+  
+  footer {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #333333;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode #welcome-container {
+    background-color: #444;
+  }
+  
+  body.dark-mode #dark-mode-toggle i {
+    color: #f0f0f0; /* Icon color in dark mode */
+  }
+  
+  body.dark-mode #dark-mode-toggle .fa-sun {
+    display: none; /* Hide sun icon in dark mode */
+  }
+  
+  body.dark-mode #dark-mode-toggle .fa-moon {
+    display: inline; /* Show moon icon in dark mode */
+  }
+  

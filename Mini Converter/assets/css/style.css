@@ -1,0 +1,252 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  width: 320px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container Style */
+#converter {
+  text-align: center;
+  background-color: #ffffff; /* Background color for the main container */
+  border-radius: 8px; /* Slightly smaller rounded corners */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 15px; /* Reduced padding */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Input, Select, and Button Styles */
+input, select, button {
+  width: calc(100% - 20px); /* Full-width with margin adjustment */
+  margin: 8px 0; /* Reduced margin */
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 4px; /* Slightly smaller rounded corners */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Button Style */
+button {
+  width: calc(100% - 20px); /* Full-width with margin adjustment */
+  margin: 8px 0; /* Reduced margin */
+  padding: 10px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border: none;
+  border-radius: 6px; /* Slightly smaller rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, filter 0.2s ease; /* Smooth transitions */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background: linear-gradient(135deg, #4CAF50, #45a049); /* Gradient background */
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border: 2px solid transparent; /* Transparent border for hover effect */
+}
+
+/* Button Hover State */
+button:hover {
+  background: linear-gradient(135deg, #45a049, #4CAF50); /* Inverted gradient on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  filter: brightness(1.1); /* Increase brightness on hover */
+}
+
+/* Button Active State */
+button:active {
+  background: linear-gradient(135deg, #4CAF50, #45a049); /* Maintain gradient */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+  transform: translateY(1px); /* Slight indent effect */
+  filter: brightness(1); /* Restore brightness on click */
+}
+
+/* Button Focus State */
+button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.5); /* Highlight outline for accessibility */
+}
+
+/* Icon Styling */
+button i {
+  margin-left: 8px; /* Adjust margin for better alignment */
+  font-size: 1.2em; /* Slightly smaller icons */
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+/* Icon Hover State */
+button:hover i {
+  color: #f0f0f0; /* Light color on hover */
+}
+
+/* Disabled Button State */
+button:disabled {
+  background: #ddd; /* Gray background */
+  color: #888; /* Gray text */
+  box-shadow: none; /* Remove shadow */
+  cursor: not-allowed; /* Change cursor */
+}
+
+/* Additional Hover Effects */
+button:not(:disabled):hover {
+  animation: pulse 1s infinite; /* Subtle pulse animation on hover */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1.1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1.1);
+  }
+}
+
+/* Result Section */
+#result {
+  margin-top: 15px; /* Reduced margin */
+}
+
+#converted-value {
+  font-size: 18px; /* Slightly smaller font size */
+  font-weight: bold;
+  color: #333; /* Darker text color for contrast */
+}
+
+/* Color Display Rounded Square */
+#color-display {
+  margin-top: 15px; /* Reduced margin */
+  width: 100px; /* Reduced width */
+  height: 100px; /* Reduced height */
+  border-radius: 12px; /* Slightly smaller rounded corners */
+  border: 2px solid #000;
+  background-color: #ffffff; /* Default color */
+  margin: 0 auto;
+  transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+/* Conversion History */
+#history {
+  margin-top: 15px; /* Reduced margin */
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+#history-list li {
+  background-color: #ffffff; /* Background for each history item */
+  margin: 5px 0;
+  padding: 8px; /* Reduced padding */
+  border-radius: 4px; /* Slightly smaller rounded corners */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Color Box */
+.color-box {
+  width: 24px; /* Slightly smaller size */
+  height: 24px; /* Slightly smaller size */
+  border-radius: 4px;
+  margin-right: 12px; /* Reduced margin */
+}
+
+/* History Item Styling */
+#history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Copy and Delete Icons */
+.copy-icon, .delete-icon {
+  cursor: pointer;
+  margin-left: 12px; /* Reduced margin */
+  font-size: 1.2em; /* Slightly smaller icons */
+  color: #007BFF; /* Default color for icons */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Icons */
+.copy-icon:hover, .delete-icon:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+/* Popup Notification */
+#copy-popup {
+  position: fixed;
+  bottom: 15px; /* Adjusted for compact layout */
+  right: 15px; /* Adjusted for compact layout */
+  padding: 10px 20px; /* Reduced padding */
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth transition for visibility */
+  z-index: 999;
+}
+
+#copy-popup.show {
+  opacity: 1;
+}
+
+#copy-popup.hidden {
+  opacity: 0;
+}
+
+/* Dark Mode Toggle Container */
+#dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.4em; /* Slightly smaller icon */
+  z-index: 1000;
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333333;
+  color: #f0f0f0;
+}
+
+body.dark-mode #converter {
+  background-color: #444444; /* Dark background for main container */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+body.dark-mode #color-display {
+  border-color: #888; /* Lighter border for dark mode */
+}
+
+body.dark-mode #history-list li {
+  background-color: #555555; /* Darker background for history items */
+  color: #f0f0f0;
+}
+
+body.dark-mode #dark-mode-toggle {
+  color: #f0f0f0; /* Icon color in dark mode */
+}
+
+body.dark-mode #dark-mode-toggle .fa-sun {
+  display: none; /* Hide sun icon in dark mode */
+}
+
+body.dark-mode #dark-mode-toggle .fa-moon {
+  display: inline; /* Show moon icon in dark mode */
+}
